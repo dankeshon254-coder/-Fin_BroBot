@@ -33,3 +33,16 @@ def handle_message(message):
         bot.send_message(message.chat.id, "Я вас не понял. Выберите действие с клавиатуры.")
 
 bot.polling(none_stop=True)
+from flask import Flask
+from threading import Thread
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return "Бот работает!"
+
+def run():
+    app.run(host='0.0.0.0', port=10000)
+
+Thread(target=run).start()
