@@ -1,7 +1,10 @@
 services:
   - type: web
-    name: Fin_BroBot
+    name: finbrobot
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python main.py
-    pythonVersion: 3.10
+    plan: free
+    buildCommand: ""
+    startCommand: "python main.py"
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: your-token-here

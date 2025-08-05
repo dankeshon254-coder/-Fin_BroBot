@@ -1,4 +1,5 @@
-aiogram==2.25.1
-gTTS==2.3.2
-matplotlib==3.8.4
-requests==2.31.0
+python-telegram-bot==13.15
+matplotlib
+pandas
+openpyxl
+flask
